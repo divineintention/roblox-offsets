@@ -9,73 +9,55 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #ffffff;
+    background: #0b1d3a;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
 }
 .container {
-    background: rgba(0,0,0,0.3);
-    padding: 40px;
-    border-radius: 20px;
+    background: #0f274f;
+    padding: 40px 60px;
+    border-radius: 15px;
     text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
-    letter-spacing: 1px;
+    color: #00c6ff;
 }
 .version {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 10px 0;
+    color: #ffffff;
 }
 button {
-    margin-top: 30px;
-    padding: 15px 30px;
+    margin-top: 25px;
+    padding: 12px 28px;
     font-size: 1em;
     font-weight: bold;
-    color: #1e3c72;
-    background: #ffffff;
+    color: #0b1d3a;
+    background: #00c6ff;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 button:hover {
-    background: #f0f0f0;
+    background: #00a0d1;
     transform: scale(1.05);
-}
-.design {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.3;
-    animation: float 10s infinite linear;
-}
-.design1 { width: 150px; height: 150px; background: #00c6ff; top: 10%; left: 15%; }
-.design2 { width: 200px; height: 200px; background: #0072ff; top: 70%; left: 70%; }
-.design3 { width: 100px; height: 100px; background: #00c6ff; top: 50%; left: 30%; }
-@keyframes float {
-    0% { transform: translateY(0) translateX(0); }
-    50% { transform: translateY(-20px) translateX(15px); }
-    100% { transform: translateY(0) translateX(0); }
 }
 </style>
 </head>
 <body>
-<div class="design design1"></div>
-<div class="design design2"></div>
-<div class="design design3"></div>
 
 <div class="container">
     <h1>Version Info</h1>
     <div class="version">Current Roblox version: <strong>c1ac69007bdc4e48</strong></div>
     <div class="version">Updated for: <strong>c1ac69007bdc4e48</strong></div>
-    <button onclick="window.location.href='offsets.html'">View Offsets</button>
+    <button onclick="window.location.href='offsets.hpp'">View Offsets</button>
 </div>
+
 </body>
 </html>
