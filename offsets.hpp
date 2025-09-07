@@ -1,3 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offsets Viewer</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+<style>
+body {
+    margin: 0;
+    font-family: monospace;
+    background: #0b1d3a;
+    color: #fff;
+    padding: 20px;
+}
+pre {
+    background: #1b263b;
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 90vh;
+    overflow: auto;
+    white-space: pre; /* default: no wrapping */
+}
+button {
+    background: #00c6ff;
+    color: #0b1d3a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+button:hover {
+    background: #00a0d1;
+}
+</style>
+</head>
+<body>
+
+<label>
+    <input type="checkbox" id="prettyToggle" onchange="toggleWrap()"> Pretty-print
+</label>
+
+<pre id="code" class="line-numbers language-cpp">
+<code>
 namespace offsets {
     inline constexpr uintptr_t VisualEnginePointer = 0x6DEC878;
     inline constexpr uintptr_t DataModelDeleterPointer = 0x7097010;
@@ -38,3 +84,17 @@ namespace offsets {
     inline constexpr uintptr_t JobId = 0x140;
     inline constexpr uintptr_t MoveDirection = 0x160;
 }
+</code>
+</pre>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script>
+function toggleWrap() {
+    const codeBlock = document.getElementById('code');
+    codeBlock.style.whiteSpace = codeBlock.style.whiteSpace === 'pre-wrap' ? 'pre' : 'pre-wrap';
+}
+</script>
+
+</body>
+</html>
